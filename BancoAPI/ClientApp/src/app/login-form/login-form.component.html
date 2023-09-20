@@ -1,0 +1,18 @@
+<div class="content" role="main">
+    <img src="/assets/banco.png" alt="" width="280.678" height="200.678">
+    <h2>B A N C O - Github Example</h2>
+
+    <form style="display: contents;" [formGroup]="form" (ngSubmit)="onSubmit()">    
+        <mat-form-field>
+        <input matInput placeholder="Cedula Cliente" formControlName="cedulaCliente">
+        </mat-form-field>
+    
+        <mat-form-field>
+        <input matInput type="password" placeholder="Contraseña" formControlName="contrasena">
+        </mat-form-field>
+
+        <div class="space">    
+            <button mat-raised-button color="primary">Login</button>
+        </div>
+    </form>            
+</div>

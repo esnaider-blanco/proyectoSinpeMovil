@@ -1,0 +1,1 @@
+{"version":3,"file":"clientLogin.model.js","sourceRoot":"","sources":["../../../../src/app/models/clientLogin.model.ts"],"names":[],"mappings":"AAAA,MAAM,OAAO,WAAW;IAMpB,YAAY,aAAqB,EAAG,UAAkB;QACpD,IAAI,CAAC,aAAa,GAAG,aAAa,CAAC;QACnC,IAAI,CAAC,UAAU,GAAG,UAAU,CAAC;IAC/B,CAAC;CACJ"}

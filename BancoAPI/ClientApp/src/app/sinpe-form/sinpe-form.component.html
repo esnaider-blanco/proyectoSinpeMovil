@@ -1,0 +1,22 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<h1 mat-dialog-title>Sinpe Movil</h1>
+<div mat-dialog-content>
+    <form [formGroup]="sinpeForm">
+        <mat-form-field>            
+            <input matInput placeholder="Telefono destino" formControlName="numeroDestino" (focusout)="checkPhoneNumber()">            
+        </mat-form-field>
+        <h5 id="clientName">{{nombreClienteDestino}} <span class="material-icons md-24 {{clientColorIcon}}">{{clientIcon}}</span></h5>        
+        <mat-form-field>
+         <input id="sinpeAmountField" matInput placeholder="Monto" formControlName="monto" (focusout)="checkIfAmountIsValid()">
+        </mat-form-field>
+        <h5 id="msgMonto">{{msgMonto}} <span class="material-icons md-24 {{amountColorIcon}}">{{amountIcon}}</span></h5>
+        <mat-form-field>
+            <input matInput placeholder="Descripcion" formControlName="descripcion">
+        </mat-form-field>
+    </form>
+</div>
+  <div mat-dialog-actions class="space">    
+    <button mat-raised-button color="primary" (click)="onSubmit()">Enviar</button>
+    <button mat-raised-button color="warn" (click)="onClose()">Cancelar</button>
+</div>

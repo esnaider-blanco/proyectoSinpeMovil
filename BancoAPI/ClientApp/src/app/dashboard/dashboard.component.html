@@ -1,0 +1,61 @@
+<mat-toolbar>
+  <div>
+    <a class="button" (click)="openSinpeForm()">Sinpe Movil</a>
+  </div> 
+</mat-toolbar>
+
+<div class="content" role="main">
+  <div>
+    <h1>Cuentas personales</h1>
+  </div>
+
+  <table mat-table [dataSource]="bankAccounts" class="mat-elevation-z8">
+    
+      <ng-container matColumnDef="nombreCuenta">
+        <th mat-header-cell *matHeaderCellDef> Nombre Cuenta </th>
+        <td mat-cell *matCellDef="let element"> {{element.nombreCuenta}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="tipoCuenta">
+        <th mat-header-cell *matHeaderCellDef> Tipo Cuenta </th>
+        <td mat-cell *matCellDef="let element"> {{element.tipoCuenta}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="tipoMoneda">
+        <th mat-header-cell *matHeaderCellDef> Tipo Moneda </th>
+        <td mat-cell *matCellDef="let element"> {{element.tipoMoneda}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="entidad">
+        <th mat-header-cell *matHeaderCellDef> Entidad </th>
+        <td mat-cell *matCellDef="let element"> {{element.entidad}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="numeroCuenta">
+        <th mat-header-cell *matHeaderCellDef> Numero Cuenta </th>
+        <td mat-cell *matCellDef="let element"> {{element.numeroCuenta}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="saldo">
+        <th mat-header-cell *matHeaderCellDef> Saldo </th>
+        <td mat-cell *matCellDef="let element"> {{element.saldo}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="estadoCuenta">
+        <th mat-header-cell *matHeaderCellDef> Status </th>
+        <td mat-cell *matCellDef="let element"> {{element.estadoCuenta}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="esCuentaPrincipal">
+        <th mat-header-cell *matHeaderCellDef> Es Cuenta Principal </th>
+        <td mat-cell *matCellDef="let element"> {{element.esCuentaPrincipal}} </td>
+      </ng-container>
+    
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+
+
+  
+  

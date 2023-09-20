@@ -1,0 +1,50 @@
+<h1 mat-dialog-title>Nueva Cuenta </h1>
+<div mat-dialog-content>
+    <form [formGroup]="newBankAccountForm">
+        <mat-form-field>            
+            <mat-select placeholder="Cliente" formControlName="idCliente"> 
+                <mat-option *ngFor="let client of clientList" [value]="client.id">{{client.cedulaCliente}} | {{client.nombre}} {{client.primerApellido}}</mat-option>                   
+            </mat-select>
+        </mat-form-field>  
+        <mat-form-field>           
+            <mat-select placeholder="Tipo Cuenta" formControlName="idTipoCuenta"> 
+                <mat-option *ngFor="let accountType of accountTypeList" [value]="accountType.id">{{accountType.tipoCuenta}}</mat-option>                   
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>           
+            <mat-select placeholder="Entidad Bancaria" formControlName="idEntidad"> 
+                <mat-option *ngFor="let accountType of bankEntitiesList" [value]="accountType.id">{{accountType.nombre}}</mat-option>                   
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>           
+            <mat-select placeholder="Tipo de Moneda" formControlName="idTipoMoneda"> 
+                <mat-option *ngFor="let accountType of bankCurrencyTypeList" [value]="accountType.id">{{accountType.moneda}}</mat-option>                   
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Nombre Cuenta" formControlName="nombreCuenta">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Numero Cuenta" formControlName="numeroCuenta">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Saldo" formControlName="saldo">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-select placeholder="Status" formControlName="idEstadoCuenta"> 
+                <mat-option *ngFor="let accountStatus of accountStatusList" [value]="accountStatus.id">{{accountStatus.descripcion}}</mat-option>                   
+            </mat-select>
+        </mat-form-field>
+        <section>
+          <mat-checkbox (change)="onChkChange($event)" color="primary">Es cuenta principal</mat-checkbox>
+            
+        </section>
+        
+
+    </form>
+</div>
+
+<div mat-dialog-actions class="space">    
+    <button mat-raised-button color="primary" (click)="onSubmit()">Guardar</button>
+    <button mat-raised-button color="warn" (click)="onClose()">Cancelar</button>
+</div>

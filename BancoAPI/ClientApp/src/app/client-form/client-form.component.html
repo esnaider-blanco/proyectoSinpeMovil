@@ -1,0 +1,36 @@
+<h1 mat-dialog-title>Nuevo Cliente </h1>
+<div mat-dialog-content>
+    <form [formGroup]="newClientForm">
+        <mat-form-field>
+            <input matInput placeholder="Cedula Cliente" formControlName="cedulaCliente">
+        </mat-form-field>        
+        <mat-form-field>
+            <input matInput placeholder="Nombre" formControlName="nombre">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Primer Apellido" formControlName="primerApellido">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Segundo Apellido" formControlName="segundoApellido">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Telefono" formControlName="telefono">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="date" placeholder="Fecha Nacimiento" formControlName="fechaNacimiento">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="email" placeholder="Correo Electronico" formControlName="email">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="text" placeholder="Direccion" formControlName="direccion">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="password" placeholder="Contraseña" formControlName="contrasena">
+        </mat-form-field>
+    </form>
+  </div>
+  <div mat-dialog-actions class="space">    
+    <button mat-raised-button color="primary" (click)="onSubmit()">Guardar</button>
+    <button mat-raised-button color="warn" (click)="onClose()">Cancelar</button>
+</div>

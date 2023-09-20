@@ -1,0 +1,1 @@
+{"version":3,"file":"bankEntity.model.js","sourceRoot":"","sources":["../../../../src/app/models/bankEntity.model.ts"],"names":[],"mappings":"AAAA,MAAM,OAAO,UAAU;IAMnB,YAAa,EAAU,EAAG,MAAc,EAAC,MAAc;QACnD,IAAI,CAAC,EAAE,GAAG,EAAE,CAAC;QACb,IAAI,CAAC,MAAM,GAAG,MAAM,CAAC;QACrB,IAAI,CAAC,MAAM,GAAG,MAAM,CAAC;IACzB,CAAC;CACJ"}
