@@ -1,0 +1,1 @@
+--EXECUTE eblanco.spInsertClient 'cedula','nombre','primerApellido','segundoApellido','fechaNacimiento yyyy/mm/dd','contraseña','telefono','correo', 'direccion'
